@@ -1,0 +1,2 @@
+"use strict";var e=require("react");module.exports=function(t){var n=t.title,r=t.options,a=t.addVote,l=t.onSubmit;return e.createElement("div",{style:{padding:"20px"}},e.createElement("p",null,n),r.map((function(t){return e.createElement("div",null,e.createElement("input",{type:"radio",name:"favorite",value:t.name,onChange:function(e){return a&&a(e.target.value)}}),e.createElement("label",null,t.name))})),e.createElement("button",{onClick:function(){return l()}},"Submit"))};
+//# sourceMappingURL=index.js.map

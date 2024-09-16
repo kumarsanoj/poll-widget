@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sources":["../src/index.js"],"sourcesContent":["const App =require('./App');\n\nexport default App;\n"],"names":["App","require"],"mappings":"aAAK,MAACA,EAAKC,QAAQ"}

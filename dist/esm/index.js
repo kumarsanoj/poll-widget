@@ -1,0 +1,2 @@
+import e from"react";function t(t){var n=t.title,a=t.options,r=t.addVote,l=t.onSubmit;return e.createElement("div",{style:{padding:"20px"}},e.createElement("p",null,n),a.map((function(t){return e.createElement("div",null,e.createElement("input",{type:"radio",name:"favorite",value:t.name,onChange:function(e){return r&&r(e.target.value)}}),e.createElement("label",null,t.name))})),e.createElement("button",{onClick:function(){return l()}},"Submit"))}export{t as default};
+//# sourceMappingURL=index.js.map

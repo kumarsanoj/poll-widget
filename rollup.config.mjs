@@ -4,10 +4,10 @@ import commonjs from "@rollup/plugin-commonjs";
 import dts from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-
+import babel from "@rollup/plugin-babel";
 import postcss from "rollup-plugin-postcss";
 
-const packageJson = require("./package.json");
+import packageJson from "./package.json";
 
 export default [
   {
@@ -25,10 +25,15 @@ export default [
       },
     ],
     plugins: [
-      peerDepsExternal(),
+      // peerDepsExternal(),
       resolve(),
       commonjs(),
-    //   typescript({ tsconfig: "./tsconfig.json" }),
+      //   typescript({ tsconfig: "./tsconfig.json" }),
+      babel({
+        exclude: "node_modules/**", // Exclude node_modules from transpilation
+        presets: ["@babel/preset-env", "@babel/preset-react"],
+        babelHelpers: "bundled", // Use bundled Babel helpers
+      }),
       terser(),
       postcss(),
     ],

@@ -1,3 +1,3 @@
-const App =require('./App');
+import Poll from "./Poll.jsx";
 
-export default App;
+export default Poll;
